@@ -54,7 +54,7 @@ function getPositives(arr)
 {
     if (numbers[i]>0)
     {
-        countPositives++;
+        countPositives++; //This adds 1 to countPositives when the number in the arr is > 0
     }      
 }
     return countPositives; /*This will return 4 with given array & take any array as input */
