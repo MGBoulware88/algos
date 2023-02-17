@@ -70,8 +70,7 @@ function slice(items, startIdx, endIdx) {
         newArr.push(items[i]);
     }
 //return our newArr that contains the pushed values
-    return newArr;
-        
+    return newArr;    
 }
 
 // Tests
