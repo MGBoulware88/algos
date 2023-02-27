@@ -38,7 +38,9 @@ function howMany(i, j, element) {
     }
     sum+=theDojo[x][y];
   }
-  alert("There are " + sum + " ninjas hiding around you");
+  //alert("There are " + sum + " ninjas hiding around you");
+  //Bonus 1:
+  element.innerText = sum;
 }
     
 // BONUS CHALLENGES
