@@ -107,11 +107,11 @@ class SinglyLinkedList {
      * @returns {boolean} Indicates if a node was removed or not.
      */
     removeVal(val) {
-        if (isEmpty()) {
+        if (this.isEmpty()) {
             return false;
         }
-        current = this.head;
-        previous = this.head;
+        let current = this.head;
+        let previous = this.head;
         while (current != null) {
             if (current.data == val) {
                 if (current === this.head) {
@@ -126,8 +126,8 @@ class SinglyLinkedList {
                 current = current.next;
             }
 
-            return false;
         }
+        return false;
     }
 
     // EXTRA
@@ -141,7 +141,7 @@ class SinglyLinkedList {
      * @returns {boolean} To indicate whether the node was pre-pended or not.
      */
     prepend(newVal, targetVal) {
-        if (isEmpty()) { //early exit if empty list
+        if (this.isEmpty()) { //early exit if empty list
             return false;
         }
 
@@ -160,7 +160,7 @@ class SinglyLinkedList {
         //traverse through the SLL
         //returns true if we find targetVal
         //returns false if we get to the end w/o finding it
-        while (current.next) {
+        while (current) {
             if (current.next.data == targetVal) {
                 const newNode = new Node(newVal);
                 newNode.next = current.next;
@@ -209,4 +209,6 @@ const unorderedList = new SinglyLinkedList().insertAtBackMany([
 
 
 // Print your list like so:
+console.log(firstThreeList.toArr());
+console.log(firstThreeList.removeVal(2));
 console.log(firstThreeList.toArr());
